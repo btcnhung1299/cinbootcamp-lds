@@ -1,0 +1,7 @@
+{
+   "literature": ["literature", "background", "related"],
+   "introduction": ["introduction", "case"],
+   "methods": ["methodology", "method", "objective", "techniques", "technique", "approach", "solution"],
+   "results": ["results", "result", "experimental", "experiments", "experiment"],
+   "conclusion": ["conclusion", "conclusions", "concluding"]
+}
