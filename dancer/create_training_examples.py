@@ -2,7 +2,7 @@ import utils
 
 def create_partial_tokens(section_titles: list, sections: dict, ref_summary: list):
     """Create partial target tokens by mapping tokens in each reference summary sentence 
-    to most appropriate base sections with based on ROUGE-L precision
+    to most appropriate base sections based on ROUGE-L precision
     
     Args:
         section_titles: List of section titles.
@@ -82,4 +82,6 @@ for article in open('val.txt', 'r'):
             continue
         source_examples.append(X[i])
         target_examples.append(y[i])
-    break
+    n += 1
+    if n == 30:
+        break

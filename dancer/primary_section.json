@@ -1,5 +1,5 @@
 {
-   "introduction": ["introduction", "case"],
+   "introduction": ["introduction", "motivation", "case"],
    "methods": ["method", "technique", "approach", "solution"],
    "results": ["result", "experiment"],
    "conclusion": ["conclu"]

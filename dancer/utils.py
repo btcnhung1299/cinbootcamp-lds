@@ -7,7 +7,6 @@ with open('keyword_section.json', 'r') as fin:
 with open('primary_section.json', 'r') as fin:
     primary_section = json.load(fin)
 
-
 def is_primary_section(title: str):
     """Check whether a section is informative based on its title
     
