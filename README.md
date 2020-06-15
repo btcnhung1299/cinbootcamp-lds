@@ -1,1 +1,1 @@
-# cinnamon-lds
+# DANCER+BART for scientific papers summarization
