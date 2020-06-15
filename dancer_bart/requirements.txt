@@ -1,5 +1,7 @@
 Flask
 Flask-JSON
+flask-ngrok
+flask-cors
 torch
 transformers
-
+Werkzeug

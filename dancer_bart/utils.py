@@ -1,10 +1,10 @@
 import json
 import string
 
-with open('keyword_section.json', 'r') as fin:
+with open('keywords.json', 'r') as fin:
     keyword_section = json.load(fin)
 
-with open('primary_section.json', 'r') as fin:
+with open('main_sections.json', 'r') as fin:
     primary_section = json.load(fin)
 
 def is_primary_section(title: str):

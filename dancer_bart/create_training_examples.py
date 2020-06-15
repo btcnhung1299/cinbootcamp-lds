@@ -61,13 +61,37 @@ def create_training_example(raw_example: dict):
    
     return titles, sections, partial_target
 
+def create_sample(raw_example: dict):
+    titles = raw_example['section_names']
+    sections = utils.concate_list(raw_example['sections'])
+    blank_sections = [idx for idx in range(len(titles)) if not sections[idx].strip()]
+    offset = 0
+    for idx in blank_sections:
+        titles.pop(idx - offset)
+        sections.pop(idx - offset)
+        offset += 1
+    
+    assert len(titles) == len(sections)
+    return {'section_names': titles, 'sections': sections}
+
 # ==================== MAIN =========================
 
 
 import json
 source_examples = []
 target_examples = []
+sample_path = open('samples.txt', 'w')
 
+for article in open('val.txt', 'r'):
+    article = article.strip()
+    if not article:
+        continue
+    data = json.loads(article)
+    sample = create_sample(data)
+    sample_json = json.dumps(sample)
+    sample_path.write(sample_json + '\n')
+
+"""
 n = 0
 for article in open('val.txt', 'r'):
     article = article.strip()
@@ -85,3 +109,4 @@ for article in open('val.txt', 'r'):
     n += 1
     if n == 30:
         break
+"""
